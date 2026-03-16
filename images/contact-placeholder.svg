@@ -1,0 +1,15 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 640" role="img" aria-labelledby="title desc">
+  <title id="title">Contact Placeholder</title>
+  <desc id="desc">Generic placeholder code image for open source version.</desc>
+  <defs>
+    <linearGradient id="bg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#020617"/>
+      <stop offset="100%" stop-color="#111827"/>
+    </linearGradient>
+  </defs>
+  <rect width="640" height="640" rx="40" fill="url(#bg)"/>
+  <rect x="96" y="96" width="448" height="448" rx="24" fill="#e2e8f0"/>
+  <path d="M160 160h96v96h-96zm224 0h96v96h-96zM160 384h96v96h-96zm224 224h96v-96h-96zm-112-224h96v96h-96zm0-112h96v96h-96z" fill="#1e293b" opacity=".88"/>
+  <path d="M160 272h96v96h-96zm224 0h96v96h-96zm-112 224h96v96h-96z" fill="#475569" opacity=".88"/>
+  <text x="320" y="600" fill="#94a3b8" font-family="Arial, sans-serif" font-size="28" text-anchor="middle">Replace with your own image</text>
+</svg>

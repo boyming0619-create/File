@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>项目案例：流程自动化工具模板 | ***</title>
+    <meta name="description" content="开源项目案例模板：用于展示流程自动化、规则引擎和内部提效工具类项目。">
+    <meta name="theme-color" content="#0b0f1a">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        darkBg: '#0b0f1a',
+                        cardBg: 'rgba(30, 41, 59, 0.6)',
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        body { background-color: #0b0f1a; font-family: 'Inter', sans-serif; color: #f1f5f9; }
+        .fixed-bg {
+            position: fixed; top: 0; left: 0; width: 100%; height: 100%; z-index: -1;
+            background: url('images/bg.jpg') no-repeat center center; background-size: cover; opacity: 0.15;
+        }
+    </style>
+</head>
+
+<body class="antialiased min-h-screen relative flex flex-col items-center pb-20">
+
+    <div class="fixed-bg"></div>
+
+    <div class="w-full max-w-5xl px-6 py-12 relative z-10">
+        
+        <a href="index.html" class="inline-flex items-center gap-2 text-slate-500 hover:text-white transition-colors mb-12 group text-sm font-medium">
+            <svg class="w-4 h-4 transition-transform group-hover:-translate-x-1" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 19l-7-7m0 0l7-7m-7 7h18"></path></svg>
+            返回首页
+        </a>
+
+        <div class="mb-16 border-b border-white/10 pb-10">
+            <div class="flex items-center gap-3 mb-4">
+                <span class="px-3 py-1 bg-emerald-600/20 text-emerald-400 text-xs font-bold rounded-full uppercase tracking-wider">Efficiency Tool</span>
+                <span class="px-3 py-1 bg-indigo-600/20 text-indigo-400 text-xs font-bold rounded-full uppercase tracking-wider">Algorithm Driven</span>
+            </div>
+            <h1 class="text-4xl md:text-5xl font-extrabold text-white mb-6 tracking-tight">流程自动化工具案例模板</h1>
+            <p class="text-slate-400 text-lg leading-relaxed max-w-3xl">
+                这里展示的是一个典型的流程自动化案例模板。你可以替换成自己的业务痛点、自动化逻辑，以及这个工具如何把高频重复工作变成稳定流程。
+            </p>
+        </div>
+
+        <section class="mb-16">
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-5">
+                <div class="rounded-3xl border border-white/5 bg-slate-900/45 p-6">
+                    <div class="text-xs font-bold uppercase tracking-[0.25em] text-slate-500 mb-3">My Role</div>
+                    <p class="text-slate-300 leading-relaxed text-sm">这里适合写你在项目中的角色，比如业务拆解、逻辑设计、实现方式和交付范围。</p>
+                </div>
+                <div class="rounded-3xl border border-white/5 bg-slate-900/45 p-6">
+                    <div class="text-xs font-bold uppercase tracking-[0.25em] text-slate-500 mb-3">Core Problem</div>
+                    <p class="text-slate-300 leading-relaxed text-sm">这里适合写一个“高频重复且不能出错”的典型业务问题，说明为什么它值得被工具化。</p>
+                </div>
+                <div class="rounded-3xl border border-white/5 bg-slate-900/45 p-6">
+                    <div class="text-xs font-bold uppercase tracking-[0.25em] text-slate-500 mb-3">Why It Matters</div>
+                    <p class="text-slate-300 leading-relaxed text-sm">这里适合写这个案例为什么重要，比如帮助团队沉淀 SOP、减少错误或提升整体交付效率。</p>
+                </div>
+            </div>
+        </section>
+
+        <section class="mb-20">
+            <h2 class="text-2xl font-bold text-white mb-8 flex items-center gap-3">
+                <span class="w-1 h-8 bg-emerald-500 rounded-full"></span>
+                核心提效指标
+            </h2>
+
+            <div class="grid grid-cols-2 md:grid-cols-4 gap-4 mb-10">
+                <div class="bg-slate-900/50 backdrop-blur-md border border-white/5 p-6 rounded-2xl text-center">
+                    <div class="text-3xl font-bold text-emerald-500 mb-1">XX%</div>
+                    <div class="text-xs text-slate-500 uppercase font-bold tracking-tight">准确率占位</div>
+                </div>
+                <div class="bg-slate-900/50 backdrop-blur-md border border-white/5 p-6 rounded-2xl text-center">
+                    <div class="text-3xl font-bold text-white mb-1">~XX/Day</div>
+                    <div class="text-xs text-slate-500 uppercase font-bold tracking-tight">节省时间占位</div>
+                </div>
+                <div class="bg-slate-900/50 backdrop-blur-md border border-white/5 p-6 rounded-2xl text-center">
+                    <div class="text-3xl font-bold text-indigo-500 mb-1">Zero</div>
+                    <div class="text-xs text-slate-500 uppercase font-bold tracking-tight">错误率占位</div>
+                </div>
+                <div class="bg-slate-900/50 backdrop-blur-md border border-white/5 p-6 rounded-2xl text-center">
+                    <div class="text-3xl font-bold text-indigo-500 mb-1">Stack</div>
+                    <div class="text-xs text-slate-500 uppercase font-bold tracking-tight">技术栈占位</div>
+                </div>
+            </div>
+
+            <div class="w-full bg-slate-800/50 rounded-3xl border border-white/10 overflow-hidden relative group mb-8">
+                <div class="aspect-[21/9] w-full relative flex items-center justify-center bg-slate-900/50">
+                    <img src="images/community-placeholder.svg" alt="项目图片模板" class="w-full h-full object-cover opacity-80 group-hover:opacity-100 transition-all duration-500" loading="lazy" decoding="async">
+                    <div class="absolute inset-0 flex flex-col items-center justify-center group-hover:hidden pointer-events-none">
+                        <svg class="w-12 h-12 text-slate-600 mb-2" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M20 7l-8-4-8 4m16 0l-8 4m8-4v10l-8 4m0-10L4 7m8 4v10M4 7v10l8 4"></path></svg>
+                        <span class="text-slate-500 text-sm font-mono"></span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="space-y-24">
+            
+            <div class="md:flex gap-10 items-start">
+                <div class="md:w-1/3 mb-6 md:mb-0">
+                    <div class="w-12 h-12 bg-emerald-600/20 text-emerald-500 rounded-2xl flex items-center justify-center mb-4">
+                        <svg class="w-6 h-6" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M4 7v10c0 1.1.9 2 2 2h12a2 2 0 002-2V7a2 2 0 00-2-2H6a2 2 0 00-2 2z"></path><path d="M9 12l2 2 4-4"></path></svg>
+                    </div>
+                    <h3 class="text-xl font-bold text-white mb-3">01. 模块一说明</h3>
+                    <p class="text-slate-400 text-sm leading-relaxed">
+                        <strong>挑战：</strong> 这里适合写这个模块处理的具体难点。<br>
+                        <strong>方案：</strong> 这里适合写你的自动化逻辑、规则系统或算法思路。<br>
+                        <strong>结果：</strong> 这里适合写一个清晰的效率或准确率变化。
+                    </p>
+                </div>
+                <div class="md:w-2/3 bg-slate-800/50 rounded-3xl border border-white/10 overflow-hidden relative group aspect-video">
+                    <img src="images/community-placeholder.svg" alt="项目图片模板" class="w-full h-full object-cover opacity-60 group-hover:opacity-100 transition-opacity" loading="lazy" decoding="async">
+                    <div class="absolute inset-0 flex flex-col items-center justify-center group-hover:hidden pointer-events-none">
+                         <span class="text-slate-500 text-sm font-mono"></span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="md:flex gap-10 items-start flex-row-reverse">
+                <div class="md:w-1/3 mb-6 md:mb-0">
+                    <div class="w-12 h-12 bg-indigo-600/20 text-indigo-500 rounded-2xl flex items-center justify-center mb-4">
+                        <svg class="w-6 h-6" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"></path></svg>
+                    </div>
+                    <h3 class="text-xl font-bold text-white mb-3">02. 模块二说明</h3>
+                    <p class="text-slate-400 text-sm leading-relaxed">
+                        <strong>挑战：</strong> 这里适合写一个重复输入、重复整理或重复上传的场景。<br>
+                        <strong>方案：</strong> 这里适合写你如何解析、生成或回填结构化数据。<br>
+                        <strong>价值：</strong> 这里适合写它如何简化协作流程，减少交接成本。
+                    </p>
+                </div>
+                <div class="md:w-2/3 bg-slate-800/50 rounded-3xl border border-white/10 overflow-hidden relative group aspect-video">
+                    <img src="images/community-placeholder.svg" alt="项目图片模板" class="w-full h-full object-cover opacity-60 group-hover:opacity-100 transition-opacity" loading="lazy" decoding="async">
+                    <div class="absolute inset-0 flex flex-col items-center justify-center group-hover:hidden pointer-events-none">
+                         <span class="text-slate-500 text-sm font-mono"></span>
+                    </div>
+                </div>
+            </div>
+
+        </section>
+
+        <div class="mt-24 p-10 bg-gradient-to-r from-emerald-950/20 to-slate-900 border border-white/5 rounded-[2rem]">
+            <h3 class="text-xl font-bold text-white mb-6 flex items-center gap-2">
+                <svg class="w-6 h-6 text-emerald-500" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>
+                这个案例模板的展示重点：
+            </h3>
+            <div class="space-y-4 text-sm text-slate-300">
+                <p>● <strong>业务工程化能力：</strong> 这里适合写你如何把业务问题拆成规则、流程和可交付系统。</p>
+                <p>● <strong>以用户为中心：</strong> 这里适合写你如何兼顾使用门槛、部署方式和一线操作体验。</p>
+                <p>● <strong>流程资产化：</strong> 这里适合写这个工具如何从一次性经验升级成长期可复用资产。</p>
+            </div>
+        </div>
+
+        <div class="mt-10 rounded-[2rem] border border-emerald-500/10 bg-emerald-500/5 p-8 md:flex md:items-center md:justify-between gap-6">
+            <div class="md:max-w-2xl">
+                <h3 class="text-2xl font-bold text-white">如果你要把这页替换成自己的自动化案例，这里建议放一句很直白的 CTA</h3>
+                <p class="mt-3 text-slate-400 leading-relaxed">可以引导访客查看服务、了解更多案例，或者直接进入联系页。重点是让用户知道看完这个案例后下一步该去哪。</p>
+            </div>
+            <div class="mt-6 md:mt-0 flex flex-wrap gap-3">
+                <a href="business.html" class="inline-flex items-center gap-2 rounded-full bg-emerald-500 text-slate-950 px-5 py-3 font-bold hover:bg-emerald-400 transition-colors">查看服务模板</a>
+                <a href="connect.html" class="inline-flex items-center gap-2 rounded-full border border-white/10 bg-white/5 px-5 py-3 font-bold text-white hover:bg-white/10 transition-colors">查看联系页模板</a>
+            </div>
+        </div>
+
+    </div>
+
+</body>
+</html>

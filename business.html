@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>我的业务 | ***</title>
+    <meta name="description" content="*** 的开源业务页模板，可替换为你自己的服务、产品和合作方式。">
+    <meta name="theme-color" content="#0b0f1a">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        darkBg: '#0b0f1a',
+                        cardBg: 'rgba(30, 41, 59, 0.6)',
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        body { background-color: #0b0f1a; font-family: 'Inter', sans-serif; color: #f1f5f9; }
+        .fixed-bg {
+            position: fixed; top: 0; left: 0; width: 100%; height: 100%; z-index: -1;
+            background: url('images/bg.jpg') no-repeat center center; background-size: cover; opacity: 0.2;
+        }
+        .modal {
+            display: none; position: fixed; z-index: 100; left: 0; top: 0; width: 100%; height: 100%;
+            background-color: rgba(0,0,0,0.85); backdrop-filter: blur(8px); animation: fadeIn 0.3s ease-out;
+        }
+        @keyframes fadeIn { from { opacity: 0; } to { opacity: 1; } }
+    </style>
+</head>
+
+<body class="antialiased min-h-screen flex flex-col items-center relative">
+
+    <div class="fixed-bg"></div>
+
+    <div class="w-full max-w-4xl px-6 py-12 relative z-10">
+        
+        <a href="index.html" class="inline-flex items-center gap-2 text-slate-400 hover:text-white transition-colors mb-10 group text-sm font-medium">
+            <svg class="w-4 h-4 transition-transform group-hover:-translate-x-1" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 19l-7-7m0 0l7-7m-7 7h18"></path></svg>
+            返回首页
+        </a>
+
+        <div class="mb-12">
+            <h1 class="text-4xl font-extrabold text-white mb-3 tracking-tight">我的业务 <span class="text-purple-500">.</span></h1>
+            <p class="text-slate-400 text-lg">我把自己这些年跑出来的方法、工具流和实战经验，整理成了可以直接帮到别人的服务和产品。</p>
+        </div>
+
+        <div class="mb-12 rounded-[2rem] border border-white/5 bg-slate-900/40 backdrop-blur-md p-8">
+            <h2 class="text-2xl font-bold text-white mb-4">我更适合帮助什么样的人？</h2>
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-4 text-sm">
+                <div class="rounded-2xl border border-white/5 bg-white/5 p-5 text-slate-300">
+                    想把 AI 真正接进业务、内容或个人项目，但还停留在“知道很多、落不了地”的人。
+                </div>
+                <div class="rounded-2xl border border-white/5 bg-white/5 p-5 text-slate-300">
+                    正在做跨境、电商、副业或数字产品，希望提升效率、减少试错和更快看到结果的人。
+                </div>
+                <div class="rounded-2xl border border-white/5 bg-white/5 p-5 text-slate-300">
+                    不想听空话，更想拿到可执行建议、真实案例和明确下一步的人。
+                </div>
+            </div>
+        </div>
+
+        <div class="mb-12">
+            <h2 class="text-sm font-bold text-slate-500 uppercase tracking-widest mb-4">咨询服务</h2>
+            <button onclick="showWX()" type="button" aria-haspopup="dialog" aria-controls="wxModal" class="w-full relative overflow-hidden bg-gradient-to-r from-slate-900 to-slate-800 border border-purple-500/30 rounded-3xl p-8 text-left hover:scale-[1.01] transition-all group shadow-2xl shadow-purple-900/10">
+                <div class="absolute top-0 right-0 p-4 opacity-10 group-hover:opacity-20 transition-opacity">
+                    <svg class="w-32 h-32 text-purple-500 fill-current" viewBox="0 0 24 24"><path d="M20 2H4c-1.1 0-2 .9-2 2v18l4-4h14c1.1 0 2-.9 2-2V4c0-1.1-.9-2-2-2z"></path></svg>
+                </div>
+                <div class="relative z-10 md:flex justify-between items-center gap-6">
+                    <div>
+                        <div class="inline-block px-3 py-1 bg-purple-500/20 text-purple-400 text-xs font-bold rounded-full mb-3">1v1 深度咨询</div>
+                        <h3 class="text-2xl font-bold text-white mb-2">1v1 咨询 / 路径梳理 / 实战建议</h3>
+                        <p class="text-slate-400 text-sm leading-relaxed max-w-xl">
+                            适合正在做跨境、AI 落地、个人副业、内容项目的人。
+                            <br/>我会更直接地帮你拆问题、给路径、讲判断，不讲空话，只聊真正能推进结果的东西。
+                        </p>
+                    </div>
+                    <div class="mt-6 md:mt-0 flex flex-col items-end min-w-[120px]">
+                        <span class="text-3xl font-bold text-white">¥499<span class="text-sm text-slate-500 font-normal">/hour</span></span>
+                        <div class="mt-3 flex items-center gap-2 text-purple-400 text-sm font-bold group-hover:text-purple-300">
+                            替换为你的预约方式 <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"></path></svg>
+                        </div>
+                    </div>
+                </div>
+            </button>
+        </div>
+
+        <h2 class="text-sm font-bold text-slate-500 uppercase tracking-widest mb-4">数字产品</h2>
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+            
+            <a href="#" class="block bg-slate-900/50 backdrop-blur-md border border-white/5 rounded-3xl p-6 hover:border-amber-500/50 hover:bg-slate-800/80 transition-all group flex flex-col h-full">
+                <div class="w-12 h-12 bg-amber-500/10 rounded-xl flex items-center justify-center text-amber-500 mb-4 group-hover:scale-110 transition-transform">
+                    <svg class="w-7 h-7 fill-current" viewBox="0 0 24 24"><path d="M12 3L1 9l4 2.18v6L12 21l7-3.82v-6l2-1.09V17h2V9L12 3zm6.82 6L12 12.72 5.18 9 12 5.28 18.82 9zM17 15.99l-5 2.73-5-2.73v-3.72l5 2.73 5-2.73v3.72z"/></svg>
+                </div>
+                <h3 class="text-lg font-bold text-white mb-2">ACCA 全科通关攻略</h3>
+                <p class="text-slate-400 text-xs mb-6 flex-1">全国冠军经验沉淀，帮你少走无效弯路，用一套资料快速抓住考试逻辑。</p>
+                <div class="flex justify-between items-end border-t border-white/5 pt-4">
+                    <span class="text-xl font-bold text-white">¥39.99</span>
+                    <span class="text-xs text-amber-500 flex items-center gap-1 bg-amber-500/10 px-2 py-1 rounded">闲鱼购买 <svg class="w-3 h-3" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"></path></svg></span>
+                </div>
+            </a>
+
+            <a href="#" class="block bg-slate-900/50 backdrop-blur-md border border-white/5 rounded-3xl p-6 hover:border-blue-500/50 hover:bg-slate-800/80 transition-all group flex flex-col h-full">
+                <div class="w-12 h-12 bg-blue-500/10 rounded-xl flex items-center justify-center text-blue-500 mb-4 group-hover:scale-110 transition-transform">
+                    <svg class="w-7 h-7 fill-current" viewBox="0 0 24 24"><path d="M20 2H4c-1.1 0-2 .9-2 2v12c0 1.1.9 2 2 2h14l4 4V4c0-1.1-.9-2-2-2zm-2 12H6v-2h12v2zm0-3H6V9h12v2zm0-3H6V6h12v2z"/></svg> </div>
+                <script>
+                    document.currentScript.previousElementSibling.innerHTML = `<svg class="w-7 h-7 fill-none stroke-current" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M5 3v4M3 5h4M6 17v4m-2-2h4m5-16l2.286 6.857L21 12l-5.714 2.143L13 21l-2.286-6.857L5 12l5.714-2.143L13 3z" /></svg>`;
+                </script>
+
+                <h3 class="text-lg font-bold text-white mb-2">国行 iPhone 开启 AI</h3>
+                <p class="text-slate-400 text-xs mb-6 flex-1">低成本解决限制问题，在国行设备上尽快体验 Apple Intelligence 完整能力。</p>
+                <div class="flex justify-between items-end border-t border-white/5 pt-4">
+                    <span class="text-xl font-bold text-white">¥5.99</span>
+                    <span class="text-xs text-blue-500 flex items-center gap-1 bg-blue-500/10 px-2 py-1 rounded">立即解锁 <svg class="w-3 h-3" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"></path></svg></span>
+                </div>
+            </a>
+
+            <a href="#" class="block bg-slate-900/50 backdrop-blur-md border border-white/5 rounded-3xl p-6 hover:border-emerald-500/50 hover:bg-slate-800/80 transition-all group flex flex-col h-full">
+                <div class="w-12 h-12 bg-emerald-500/10 rounded-xl flex items-center justify-center text-emerald-500 mb-4 group-hover:scale-110 transition-transform">
+                    <svg class="w-7 h-7 fill-none stroke-current" stroke-width="2" viewBox="0 0 24 24"><rect x="2" y="3" width="20" height="14" rx="2" ry="2"></rect><line x1="8" y1="21" x2="16" y2="21"></line><line x1="12" y1="17" x2="12" y2="21"></line></svg>
+                </div>
+                <h3 class="text-lg font-bold text-white mb-2">个人网站极速搭建</h3>
+                <p class="text-slate-400 text-xs mb-6 flex-1">如果你也想做一个能展示自己、承接合作、长期沉淀的个人网站，可以直接来聊。</p>
+                <div class="flex justify-between items-end border-t border-white/5 pt-4">
+                    <span class="text-xl font-bold text-white">定制咨询</span>
+                    <span class="text-xs text-emerald-500 flex items-center gap-1 bg-emerald-500/10 px-2 py-1 rounded">查看详情 <svg class="w-3 h-3" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"></path></svg></span>
+                </div>
+            </a>
+
+        </div>
+
+        <div class="mt-16 text-center">
+            <p class="text-slate-600 text-xs">这里适合写你的成交方式、交付说明或预约规则。</p>
+        </div>
+    </div>
+
+    <div id="wxModal" class="modal" onclick="hideWX()" role="dialog" aria-modal="true" aria-labelledby="wxModalTitle">
+        <div class="flex items-center justify-center min-h-screen p-4">
+            <div class="bg-[#1e293b] p-8 rounded-[2rem] max-w-sm w-full text-center border border-white/10 shadow-2xl relative" onclick="event.stopPropagation()">
+                <button onclick="hideWX()" type="button" aria-label="关闭咨询弹窗" class="absolute top-4 right-4 w-8 h-8 rounded-full bg-white/5 flex items-center justify-center text-slate-400 hover:bg-white/10 hover:text-white transition-colors">
+                    <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path></svg>
+                </button>
+                <div class="mb-6">
+                    <div class="w-16 h-16 bg-purple-500/20 text-purple-500 rounded-full flex items-center justify-center mx-auto mb-4">
+                         <svg class="w-8 h-8 fill-none stroke-current" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M8 12h.01M12 12h.01M16 12h.01M21 12c0 4.418-4.03 8-9 8a9.863 9.863 0 01-4.255-.949L3 20l1.395-3.72C3.512 15.042 3 13.574 3 12c0-4.418 4.03-8 9-8s9 3.582 9 8z"></path></svg>
+                    </div>
+                    <h3 id="wxModalTitle" class="font-bold text-2xl text-white">预约咨询服务</h3>
+                    <p class="text-slate-400 text-sm mt-1">请在这里写你的预约备注规则：<span class="text-purple-400">***</span></p>
+                </div>
+                <div class="bg-white p-2 rounded-xl mb-6">
+                    <img src="images/contact-placeholder.svg" alt="联系方式模板" class="w-full rounded-lg" loading="lazy" decoding="async">
+                </div>
+                <div class="bg-slate-900/50 p-3 rounded-xl border border-white/5 flex items-center justify-between">
+                    <span class="text-slate-400 text-sm pl-2">联系方式:</span>
+                    <span class="text-white font-mono font-bold select-all">***</span>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        function showWX() { document.getElementById('wxModal').style.display = "block"; document.body.style.overflow = "hidden"; }
+        function hideWX() { document.getElementById('wxModal').style.display = "none"; document.body.style.overflow = "auto"; }
+        document.addEventListener('keydown', function(event) { if (event.key === "Escape") hideWX(); });
+    </script>
+</body>
+
+</html>
+
+
